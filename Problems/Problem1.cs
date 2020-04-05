@@ -5,7 +5,7 @@ namespace DailyCodingProblems
      * For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
      */
 
-    public class Problem1 : Problem
+    public class Problem1 : IProblem
     {
         private readonly int[] numbers;
         private readonly int addUpNumber;
@@ -19,7 +19,7 @@ namespace DailyCodingProblems
             this.addUpNumber = addUpNumber;
         }
 
-        public override void Solve()
+        public void Solve()
         {
             for (int i = 0; i < numbers.Length; i++)
             {
