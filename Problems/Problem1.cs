@@ -10,6 +10,9 @@ namespace DailyCodingProblems
         private readonly int[] numbers;
         private readonly int addUpNumber;
 
+        private int firstNumber;
+        private int secondNumber;
+
         public Problem1(int[] numbers, int addUpNumber)
         {
             this.numbers = numbers;
@@ -20,14 +23,13 @@ namespace DailyCodingProblems
         {
             for (int i = 0; i < numbers.Length; i++)
             {
-                int firstNumber = numbers[i];
-                int secondNumber;
+                firstNumber = numbers[i];
                 for (int j = i + 1; j < numbers.Length; j++)
                 {
                     secondNumber = numbers[j];
-                    if (IsAddUpTo(ref firstNumber, ref secondNumber))
+                    if (AreAddUpTo())
                     {
-                        PrintPositiveResult(ref firstNumber, ref secondNumber);
+                        PrintPositiveResult();
                         return;
                     }
                 }
@@ -36,7 +38,7 @@ namespace DailyCodingProblems
             PrintNegativeResult();
         }
 
-        private void PrintPositiveResult(ref int firstNumber, ref int secondNumber)
+        private void PrintPositiveResult()
         {
             System.Console.WriteLine($"{firstNumber} + {secondNumber} = {addUpNumber}");
         }
@@ -46,7 +48,7 @@ namespace DailyCodingProblems
             System.Console.WriteLine($"No any given numbers are add up to {addUpNumber}");
         }
 
-        private bool IsAddUpTo(ref int firstNumber, ref int secondNumber)
+        private bool AreAddUpTo()
         {
             return firstNumber + secondNumber == addUpNumber;
         }
