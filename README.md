@@ -1,6 +1,9 @@
 # DailyCodingProblems
 The repo where I solve coding problems from [DailyCodingProblems](https://www.dailycodingproblem.com/). 
 
+## Problem3
+Given the root to a binary tree, implement serialize(root), which serializes the tree into a string, and deserialize(s), which deserializes the string back into the tree.
+
 ## Problem2
 Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
 
