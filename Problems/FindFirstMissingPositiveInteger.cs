@@ -9,11 +9,11 @@ namespace DailyCodingProblems
      * You can modify the input array in-place.
      */
 
-    public class Problem4 : IProblem
+    public class FindFirstMissingPositiveInteger : IProblem
     {
         private int[] array;
 
-        public Problem4(int[] array)
+        public FindFirstMissingPositiveInteger(int[] array)
         {
             this.array = array;
         }
